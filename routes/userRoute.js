@@ -2,7 +2,7 @@ const express=require('express');
 const user_Route=express();
 const bodyParser=require('body-parser');
 const userController=require('../controllers/userController');
-const config=require('../config/config');
+const config=require('../config');
 const session=require('express-session');
 const auth=require('../middlewares/auth');
 

@@ -4,7 +4,7 @@ const adminController = require('../controllers/adminController');
 const bodyParser = require('body-parser');
 const hbs = require('hbs');
 const session = require('express-session');
-const config = require('../config/config');
+const config = require('../config');
 
 const admin_Route = express();
 
