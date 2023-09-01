@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home</title>
+    <style>
+        body {
+            background-image: url("https://coreui.io/images/ogimages/coreui_1200_600.jpg");
+            background-size: cover;
+            text-decoration: none;
+        }
+        .box {
+            border: 1px solid rgb(231, 233, 241);
+            border-radius: 2%;
+            align-items: center;
+            margin: 80px;
+            max-width: 30%;
+            height: 500px;
+            background-color: rgba(176, 178, 193, 0.432);
+
+        }
+        a {
+            text-decoration: none;
+                border: 1px solid wheat;
+                padding: 14px;
+                border-radius: 20px;
+                background-color: rgba(22, 113, 205, 0.322);
+                color: white;
+                font-weight: 900;
+        }
+        @media only screen and (max-width: 600px) {
+            body {
+                background-image: url("https://coreui.io/images/ogimages/coreui_1200_600.jpg");
+                background-size: 900px 900px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="color: Black; margin-left:30px; margin-top:20px;">Welcome {{user.name}}</h2>
+     <center>
+    <div class="box">
+   
+        <h2>This is the Admin Home Page</h2>
+    
+        {{!-- <h3>Welcome to Home Page, {{user.name}}</h3> --}}
+
+        {{!-- <h3>Your Details are :</h3> --}}
+        <h3 style="color: black;">Your Details are :</h3>
+            <table border="2px solid black" style="border-radius: 10px;">
+                <tr style="padding: 20px;border-radius: 10px;">
+                    <th style="padding: 20px;">Name</th>
+                    <td style="padding: 20px;">{{user.name}}</td>
+                </tr>
+                <tr style="padding: 20px;">
+                    <th style="padding: 20px;">Email</th>
+                    <td style="padding: 20px;">{{user.email}}</td>
+                </tr>
+                <tr style="padding: 20px;">
+                    <th style="padding: 20px;">Phone Number</th>
+                    <td style="padding: 20px;">{{user.pno}}</td>
+                </tr>
+            </table>
+        <br>
+        <br>
+        <a href="/admin/Userlist">Dashboard</a>
+        <br>
+        <br>
+        <br>
+        {{!-- <br> --}}
+        <a href="/logout">logout</a>
+
+   
+    </div> </center>
+</body>
+
+</html>

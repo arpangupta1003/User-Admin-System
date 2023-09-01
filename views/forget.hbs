@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+    <style>
+        body {
+            background-image: url("https://images.unsplash.com/photo-1553702446-a39d6fbee6cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
+            background-size: cover ;
+        }
+        @media only screen and (max-width: 600px)
+        {
+             body{
+                background-image: url("https://images.unsplash.com/photo-1553702446-a39d6fbee6cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
+                background-size: 900px 900px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h4>{{message}}</h4>
+
+
+    <center>
+        <h1>Forget Password</h1>
+        <form action="/forget" method="post">
+            <input type="email" name="email" id="" placeholder="Enter Email" required>
+            <br><br>
+            <input type="submit" name="" id="" placeholder="" value="send reset link">
+        </form>
+        <br>
+        <a href="/">Remember the Password</a>
+    </center>
+</body>
+
+</html>
