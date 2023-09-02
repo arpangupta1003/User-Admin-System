@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 const config=require('../config');
 // console.log(config.password);
-mongoose.connect(`mongodb://127.0.0.1:27017/uasDB`,
+mongoose.connect(`mongodb+srv://arpangupta1003:Ak$210273@usm.lp41xyd.mongodb.net/`,
 process.env.MONGO_URL,
 {
     useNewUrlParser:true,
