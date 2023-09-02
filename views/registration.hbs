@@ -7,15 +7,63 @@
     <title>Document</title>
     <style>
         body {
-            background-image: url("https://images.unsplash.com/photo-1553702446-a39d6fbee6cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
+            background-image: url("https://blitzen.com/blog/wp-content/uploads/new-tech.jpg");
             background-size: cover;
+            height: 150px;
             text-decoration: none;
+             {{!-- filter: blur(10px); --}}
+              background-repeat: no-repeat;
+        }
+
+        .box {
+            {{!-- border: 1px solid black;
+            border-radius: 2%;
+            align-items: center;
+            margin: 80px;
+            max-width: 30%;
+            height: 500px;
+            background-color: white;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_jvx7zNEg1po5CxZXhhnccyJQUgZ9YoI1gA&usqp=CAU");
+            background-size:cover;
+            filter: blur(1px);
+            filter:blur(01px);
+            -webkit-filter: blur(8px); --}}
+            background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+
         }
 
         a {
             text-decoration: none;
+            padding: 5px 40px;
+            background-color: #18428f;
+            border-radius: 4px;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
         }
-
+        #signupButton{
+            padding: 5px 40px;
+            background-color: #18428f;
+            border-radius: 4px;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        input{
+            padding: 10px 20px;
+        }
         @media only screen and (max-width: 600px) {
             body {
                 background-image: url("https://images.unsplash.com/photo-1553702446-a39d6fbee6cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
@@ -31,28 +79,30 @@
 
 <body>
     <center>
-        <h2>Welcome to the User Registration Page</h2>
-    </center>
-    <center>
+        <div class="box">
+        <h2>Create an Account</h2>
+    {{!-- </center> --}}
+    {{!-- <center> --}}
         <form action="/register" method="post">
-            <input type="text" name="name" placeholder="Enter Your Name">
+            <input type="text" name="name" placeholder="Name">
             <br>
             <br>
-            <input type="email" name="email" placeholder="Enter YourEmail">
+            <input type="email" name="email" placeholder="Email">
             <br>
             <br>
-            <input type="text" name="pno" placeholder="Enter Your Phone Number">
+            <input type="text" name="pno" placeholder="Phone Number">
             <br>
             <br>
-            <input type="password" name="password" placeholder="Enter YourPassword">
+            <input type="password" name="password" placeholder="Password">
             <br>
             <br>
-            <input type="submit" value="Register">
+            <input type="submit" value="Sign me up" id="signupButton">
             <br>
             <br>
             <a href="/login">Sign In</a>
         </form>
         <h5>{{message}}</h5>
+        </div>
     </center>
 </body>
 
