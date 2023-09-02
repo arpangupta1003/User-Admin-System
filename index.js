@@ -7,7 +7,7 @@ const bodyParser=require('body-parser');
 const userRoute=require('./routes/userRoute');
 const adminRoute=require('./routes/adminRoute');
 
-const port=3000;
+const port=5500;
 
 
 app.use('/',userRoute);

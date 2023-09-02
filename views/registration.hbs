@@ -4,56 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@500&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-image: url("https://images.unsplash.com/photo-1553702446-a39d6fbee6cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
-            background-size: cover;
-            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #eee;
         }
 
-        a {
-            text-decoration: none;
+        form {
+            background-color: #fff;
+            width: 400px;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         }
 
-        @media only screen and (max-width: 600px) {
-            body {
-                background-image: url("https://images.unsplash.com/photo-1553702446-a39d6fbee6cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
-                background-size: 900px 900px;
+        h2,
+        h5 {
+            font-family: ubuntu;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: .5rem;
+            padding: 0.5rem;
+            font-family: poppins;
+            outline: none;
+            font-size: 1rem;
+            border: 1px solid rgb(158, 158, 158);
+        }
+
+        label {
+            font-family: poppins;
+        }
+
+        input[type=submit] {
+            margin-top: 1rem;
+            background-color: rgb(79, 79, 232);
+            outline: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(110, 110, 239);
+        }
+
+        .link {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            font-family: poppins;
+            font-size: .8rem;
+        }
+
+        @media screen and (max-width:600px) {
+            form {
+                width: 100vw;
+                height: 100vh;
+                padding: auto;
             }
 
-            a {
-                text-decoration: none;
+            .register-form {
+                width: 100vw;
+                height: 100vh;
             }
         }
     </style>
 </head>
 
 <body>
-    <center>
-        <h2>Welcome to the User Registration Page</h2>
-    </center>
-    <center>
+    <div class="register-form">
         <form action="/register" method="post">
-            <input type="text" name="name" placeholder="Enter Your Name">
-            <br>
-            <br>
-            <input type="email" name="email" placeholder="Enter YourEmail">
-            <br>
-            <br>
-            <input type="text" name="pno" placeholder="Enter Your Phone Number">
-            <br>
-            <br>
-            <input type="password" name="password" placeholder="Enter YourPassword">
-            <br>
-            <br>
+            <h2>User Registration Form</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Full Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email Address">
+
+            <label for="pno">Phone Number:</label>
+            <input type="text" id="pno" name="pno" placeholder="Contact Number">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Set Password">
+
             <input type="submit" value="Register">
-            <br>
-            <br>
-            <a href="/login">Sign In</a>
+            <div class="link">Already have an account?<a href="/login">Sign In</a></div>
+
+            <h5>{{message}}</h5>
         </form>
-        <h5>{{message}}</h5>
-    </center>
+    </div>
 </body>
 
 </html>
