@@ -4,115 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login Form</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@500&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/827ced4c-062a-4dce-b568-40e8ebe9f87d/d25w0pz-7c81c8c0-17e5-4de3-94b4-e6e7bac5c043.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgyN2NlZDRjLTA2MmEtNGRjZS1iNTY4LTQwZThlYmU5Zjg3ZFwvZDI1dzBwei03YzgxYzhjMC0xN2U1LTRkZTMtOTRiNC1lNmU3YmFjNWMwNDMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-RfwW21PQLE7SiCKLNKNYja2hK8U5AWOR-L9a-XHNDY");
-            background-size: cover;
-            text-decoration: none;
-
-                {
-                    {
-                    !-- filter: blur(8px);
-                    -webkit-filter: blur(8px);
-                    --
-                }
-            }
-        }
-
-        .box {
-            border: 1px solid black;
-            border-radius: 2%;
+            display: flex;
+            justify-content: center;
             align-items: center;
-            margin: 80px;
-            max-width: 30%;
-            height: 500px;
-            background-color: white;
-
+            height: 100vh;
+            background-color: #eee;
+            flex-direction: column;
         }
 
-        @media only screen and (max-width: 600px) {
-            body {
-                background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/827ced4c-062a-4dce-b568-40e8ebe9f87d/d25w0pz-7c81c8c0-17e5-4de3-94b4-e6e7bac5c043.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgyN2NlZDRjLTA2MmEtNGRjZS1iNTY4LTQwZThlYmU5Zjg3ZFwvZDI1dzBwei03YzgxYzhjMC0xN2U1LTRkZTMtOTRiNC1lNmU3YmFjNWMwNDMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-RfwW21PQLE7SiCKLNKNYja2hK8U5AWOR-L9a-XHNDY");
-                background-size: 900px 900px;
-            }
+        form {
+            background-color: #fff;
+            width: 400px;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+
+        h1,
+        h4 {
+            display: flex;
+            justify-content: center;
+            font-family: ubuntu;
+            margin-bottom: 0.5rem;
         }
 
         input {
-                
-
-            width: 300px;
-            /* Set the width of the input */
-            padding: 10px;
-            /* Add some padding for better appearance */
-            border: 1px solid #ccc;
-            /* Add a border */
-            border-top:1px solid white;
-            border-right:1px solid white;
-            border-left:1px solid white;
-            border-radius: 5px;
-            /* Rounded corners */
-            font-size: 16px;
-            /* Adjust the font size */
-            color: #333;
-            /* Text color */
+            display: block;
+            width: 100%;
+            margin-bottom: .5rem;
+            padding: 0.5rem;
+            font-family: poppins;
+            outline: none;
+            font-size: 1rem;
+            border: 1px solid rgb(158, 158, 158);
         }
 
-        
-
-        a {
-            text-decoration: none;
-            border: 1px solid wheat;
-            padding: 14px;
-            border-radius: 20px;
-            background-color: rgb(22, 114, 205);
-            color: white;
-            font-weight: 900;
+        label {
+            font-family: poppins;
         }
 
         #forget {
-            text-decoration: none;
-            border: 1px solid wheat;
-            padding: 6px;
-            border-radius: 20px;
-            background-color: rgb(28, 126, 224);
+            display: flex;
+            justify-content: flex-end;
+            margin: 1rem 0;
+            font-family: poppins;
+            font-size: .8rem;
+        }
+
+        input[type=submit] {
+            margin-top: 1rem;
+            background-color: rgb(79, 79, 232);
+            outline: none;
+            border: none;
             color: white;
-            font-weight: 900;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(110, 110, 239);
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-family: poppins;
+            font-size: .8rem;
+        }
+
+        @media screen and (max-width:600px) {
+            form {
+                width: 100vw;
+                height: 100vh;
+                padding: auto;
+            }
+
+            .register-form {
+                width: 100vw;
+                height: 100vh;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h4>{{message}}</h4>
-
-
-    <center>
-        <div class="box">
-            <br>
+    <div class="box">
+        <form action="/login" method="post">
+            <h4>{{message}}</h4>
             <h1>Login Page</h1>
-            <br>
-            <form action="/login" method="post">
-                <input type="email" name="email" id="" placeholder="Enter Email" required>
-                <br><br>
-                <input type="password" name="password" id="" placeholder="Enter password" required>
-                <br>
-                <br><a href="/forget" style="margin-left:190px;" id="forget">Forget Password</a><br>
-                <br>
 
-                <input type="submit" name="" id="login-button" placeholder="" value="Login">
-            </form>
-            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email Address" required />
 
-            {{!-- <br> --}}
-            <br>
-            <br>
-            <a href="/admin">Sign In as Admin</a>
-            <br>
-            <br>
-            <br>
-            <a href="/register" id="signupButton">SignUp</a>
-        </div>
-    </center>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password" required />
+
+            <a href="/forget" id="forget">Forget Password</a>
+            <input type="submit" value="Login">
+            <div class="links">
+                <a href="/admin">Sign In as Admin</a>
+                <a href="/register" id="signupButton">SignUp</a>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
