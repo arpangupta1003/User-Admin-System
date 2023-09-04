@@ -185,7 +185,7 @@ const sendForgetMail = async (name, email, token) => {
         from: '"Tester" <tester201003@gmail.com>', // sender address
         to: email, // list of receivers
         subject: "OTP for verification ✔", // Subject line
-        html: '<p> Hii ' + name + ', please click here to <a href="https://usm-q0pk.onrender.com/forget-password?token=' + token + '"> Forget </a>your password.</p>'
+        html: '<p> Hii ' + name + ', please click here to <a href="https://user-admin-system.onrender.com/forget-password?token=' + token + '"> Forget </a>your password.</p>'
     });
 }
 
