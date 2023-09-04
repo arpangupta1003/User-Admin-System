@@ -13,7 +13,15 @@
             margin: 0;
             box-sizing: border-box;
         }
-
+a {
+            text-decoration: none;
+            padding: 5px 40px;
+            background-color: #18428f;
+            border-radius: 4px;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+        }
         body {
 
             display: flex;
@@ -82,7 +90,7 @@
                 height: 100vh;
                 padding: auto;
 
-            background-image: url("https://blitzen.com/blog/wp-content/uploads/new-tech.jpg");
+            background-image: url("");
             background-size: cover;
             height: 150px;
             text-decoration: none;
@@ -98,7 +106,7 @@
             max-width: 30%;
             height: 500px;
             background-color: white;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_jvx7zNEg1po5CxZXhhnccyJQUgZ9YoI1gA&usqp=CAU");
+            background-image: url("");
             background-size:cover;
             filter: blur(1px);
             filter:blur(01px);
@@ -141,7 +149,7 @@
         }
         @media only screen and (max-width: 600px) {
             body {
-                background-image: url("https://images.unsplash.com/photo-1553702446-a39d6fbee6cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
+                background-image: url("");
                 background-size: 900px 900px;
 
             }
@@ -156,54 +164,29 @@
 
 <body>
 
-    <div class="register-form">
-        <form action="/register" method="post">
-            <h2>User Registration Form</h2>
-
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Full Name">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Email Address">
-
-            <label for="pno">Phone Number:</label>
-            <input type="text" id="pno" name="pno" placeholder="Contact Number">
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Set Password">
-
-            <input type="submit" value="Register">
-            <div class="link">Already have an account?<a href="/login">Sign In</a></div>
-
-            <h5>{{message}}</h5>
-        </form>
-    </div>
-
     <center>
-        <div class="box">
-        <h2>Create an Account</h2>
-    {{!-- </center> --}}
-    {{!-- <center> --}}
+        <h2>Welcome to the User Registration Page</h2>
+    </center>
+    <center>
         <form action="/register" method="post">
-            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="name" placeholder="Enter Your Name">
             <br>
             <br>
-            <input type="email" name="email" placeholder="Email">
+            <input type="email" name="email" placeholder="Enter YourEmail">
             <br>
             <br>
-            <input type="text" name="pno" placeholder="Phone Number">
+            <input type="text" name="pno" placeholder="Enter Your Phone Number">
             <br>
             <br>
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password" placeholder="Enter Your Password">
             <br>
             <br>
-            <input type="submit" value="Sign me up" id="signupButton">
+            <input type="submit" value="Register">
             <br>
             <br>
             <a href="/login">Sign In</a>
         </form>
         <h5>{{message}}</h5>
-        </div>
     </center>
 
 </body>
