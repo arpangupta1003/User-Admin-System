@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/premium-photo/list-icon-notebook-with-completed-todo-list-3d-render_471402-428.jpg");
+            background-size: cover;
+        }
+
+        #Header {
+
+            text-align: center;
+            color: brown;
+            border: 1px solid red;
+        }
+        tr{
+            text-align: center;
+        }
+
+        .ModifyUser {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 820px) {
+            body {
+                background-image: url("https://img.freepik.com/premium-photo/list-icon-notebook-with-completed-todo-list-3d-render_471402-428.jpg");
+                background-size: 900px 900px;
+            }
+            tr {
+            text-align: center;
+            color: brown;
+            border: 1px solid gray;
+        }
+
+        .ModifyUser {
+            display: flex;
+            
+            justify-content: space-around;
+        }
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <br>
+    <center>
+        <h2>Delete User by Admin Page</h2>
+        <form action="" method="post">
+            <input type="email" name="email" placeholder="Enter Email of User">
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+    </center>
+    <h3>{{message}}</h3>
+</body>
+</html>

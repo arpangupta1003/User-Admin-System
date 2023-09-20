@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@500&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #eee;
+            flex-direction: column;
+        }
+
+        form {
+            background-color: #fff;
+            width: 400px;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+
+        h1,
+        h4 {
+            display: flex;
+            justify-content: center;
+            font-family: ubuntu;
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: .5rem;
+            padding: 0.5rem;
+            font-family: poppins;
+            outline: none;
+            font-size: 1rem;
+            border: 1px solid rgb(158, 158, 158);
+        }
+
+        label {
+            font-family: poppins;
+        }
+
+        input[type=submit] {
+            margin-top: 1rem;
+            background-color: rgb(79, 79, 232);
+            outline: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(110, 110, 239);
+        }
+
+        .link {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            font-family: poppins;
+            font-size: .8rem;
+        }
+
+        @media screen and (max-width:600px) {
+            form {
+                width: 100vw;
+                height: 100vh;
+                padding: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="/forget" method="post">
+            <h4>{{message}}</h4>
+            <h1>Forget Password</h1>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email Address" required />
+            <input type="submit" value="send reset link">
+            <a class="link" href="/">Remember the Password</a>
+        </form>
+    </div>
+</body>
+
+</html>

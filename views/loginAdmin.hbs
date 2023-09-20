@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@500&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            background-image: url("https://wallpaperaccess.com/full/2314983.jpg");
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #eee;
+            flex-direction: column;
+        }
+
+        form {
+            background-color: #fff;
+            width: 400px;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+
+        h1,
+        h4 {
+            display: flex;
+            justify-content: center;
+            font-family: ubuntu;
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: .5rem;
+            padding: 0.5rem;
+            font-family: poppins;
+            outline: none;
+            font-size: 1rem;
+            border: 1px solid rgb(158, 158, 158);
+        }
+
+        label {
+            font-family: poppins;
+        }
+
+        #forget {
+            display: flex;
+            justify-content: flex-end;
+            margin: 1rem 0;
+            font-family: poppins;
+            font-size: .8rem;
+        }
+
+        input[type=submit] {
+            margin-top: 1rem;
+            background-color: rgb(79, 79, 232);
+            outline: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(110, 110, 239);
+        }
+
+        .bottom-link {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            font-family: poppins;
+            font-size: .8rem;
+        }
+
+        @media screen and (max-width:600px) {
+            form {
+                width: 100vw;
+                height: 100vh;
+                padding: auto;
+            }
+
+            .register-form {
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <form action="" method="post">
+            <h1>Admin Login Page</h1>
+            <h4>{{message}}</h4>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Email Address" name="email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Password" name="password">
+            <a href="/admin/forget" id="forget">Forget Password</a>
+            <input type="submit" value="Login">
+            <a class="bottom-link" href="/home">Sign In as Guest</a>
+        </form>
+    </div>
+</body>
+
+</html>

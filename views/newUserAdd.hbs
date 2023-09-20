@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/premium-photo/list-icon-notebook-with-completed-todo-list-3d-render_471402-428.jpg");
+            background-size: cover;
+        }
+
+        #Header {
+
+            text-align: center;
+            color: brown;
+            border: 1px solid red;
+        }
+
+        tr {
+            text-align: center;
+        }
+
+        .ModifyUser {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 820px) {
+            body {
+                background-image: url("https://img.freepik.com/premium-photo/list-icon-notebook-with-completed-todo-list-3d-render_471402-428.jpg");
+                background-size: 900px 900px;
+            }
+
+          
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h2>Welcome to the Add New User page by Admin</h2>
+    </center>
+    <center>
+        <form action="" method="post">
+            <input type="text" name="name" placeholder="Enter User's Name">
+            <br>
+            <br>
+            <input type="email" name="email" placeholder="Enter User's Email">
+            <br>
+            <br>
+            <input type="text" name="pno" placeholder="Enter User's Phone Number">
+            <br>
+            <br>
+            <input type="submit" value="Register">
+            <br>
+            <br>
+            <a href="/admin/home">Go Back</a>
+        </form>
+        <h5>{{message}}</h5>
+    </center>
+</body>
+
+</html>
