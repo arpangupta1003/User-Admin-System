@@ -9,7 +9,6 @@ const adminRoute=require('./routes/adminRoute');
 
 const port=5500;
 
-
 app.use('/',userRoute);
 app.use('/admin',adminRoute);
 const viewsPath=path.join(__dirname,"./views");
@@ -18,14 +17,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "hbs");
 app.set("views", viewsPath);
-
-
-
-
-
-
-
-
 
 app.listen(port,()=>{
     console.log(`Server running successfully on PORT ${port}`);
