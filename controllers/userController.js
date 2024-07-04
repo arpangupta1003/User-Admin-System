@@ -62,7 +62,7 @@ const insertUser = async (req, res) => {
             name: req.body.name,
             email: req.body.email,
             pno: req.body.pno,
-            password: req.body.password,
+            password: securePassword,
             isAdmin: 0,
         });
         const data = await user.save();
